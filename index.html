@@ -6,24 +6,99 @@
     <title>Happy Chocolate Day!</title>
     <link rel="stylesheet" href="style.css">
     <script defer src="index.js"></script>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: linear-gradient(to right, #3e2723, #5d4037, #795548);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            max-width: 90%;
+            padding: 20px;
+            background: rgba(255, 235, 205, 0.2);
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        h1 {
+            font-size: 2rem;
+        }
+        p {
+            font-size: 1.2rem;
+        }
+        .choco-box {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .choco-img {
+            max-width: 100%;
+            height: auto;
+        }
+        button {
+            font-size: 1rem;
+            padding: 12px 24px;
+            border: none;
+            background-color: #8B4513;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.2s ease-in-out;
+        }
+        button:hover {
+            background-color: #A0522D;
+            transform: scale(1.05);
+        }
+        #surpriseText {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+        .show {
+            opacity: 1 !important;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+            .container {
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-
     <div class="container">
-        <h1>🍫 Happy Chocolate Day, My Valentine! 🍫</h1>
-        <p>Because life feels better with chocolates and someone like you!</p>
-
+        <h1>🍫 Happy Chocolate Day, Friend! 🍫</h1>
+        <p>Because life is better with chocolate and friends like you!</p>
         <div class="choco-box">
-            
+           
         </div>
-
         <button id="surpriseBtn">Click for a Sweet Surprise! 🍬</button>
-
         <div id="surpriseText" class="hidden">
             🍪 You deserve all the chocolates in the world! 🍩
         </div>
     </div>
-
+    <script>
+        document.getElementById("surpriseBtn").addEventListener("click", function() {
+            document.getElementById("surpriseText").classList.toggle("show");
+        });
+    </script>
 </body>
 </html>
+
 
